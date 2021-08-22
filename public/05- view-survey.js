@@ -47,9 +47,9 @@ function copyTextFromElement() {
     try {
         let textWantToCopy;
         if (url.origin.includes('localhost')) {
-            textWantToCopy = `http://localhost:3000/06-%20answer-login.html?${surveyUuid}`;
+            textWantToCopy = `http://localhost:3000/06-%20answer-login.html?${uuid}`;
         } else {
-            textWantToCopy = `https://sendsurveys.herokuapp.com/06-%20answer-login.html?${surveyUuid}`;
+            textWantToCopy = `https://sendsurveys.herokuapp.com/06-%20answer-login.html?${uuid}`;
         }
         //Copy the text to the clipboard
         const successful = navigator.clipboard.writeText(textWantToCopy);
