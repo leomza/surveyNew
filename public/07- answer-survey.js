@@ -66,5 +66,5 @@ async function answerSubmit(ev) {
     }
 
     alert(submitAnswers.data.message);
-    location.href = `http://localhost:3000/06-%20answer-login.html?${uuid}`;
+    location.href = `06-%20answer-login.html?${uuid}`;
 }

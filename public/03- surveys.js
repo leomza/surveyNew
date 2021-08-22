@@ -1,7 +1,3 @@
-//Get the URL
-const url_string = window.location.href;
-const url = new URL(url_string);
-
 const root = document.querySelector('#nameUser');
 
 async function renderUserDetails() {
@@ -57,12 +53,7 @@ function showSurvey(surveyId) {
 //Function to copy the path
 function copyTextFromElement(surveyUuid) {
     try {
-        let sharableSurveyLink;
-        if (url.origin.includes('localhost')) {
-            sharableSurveyLink = `http://localhost:3000/06-%20answer-login.html?${surveyUuid}`;
-        } else {
-            sharableSurveyLink = `https://sendsurveys.herokuapp.com/06-%20answer-login.html?${surveyUuid}`;
-        }
+        const sharableSurveyLink = `06-%20answer-login.html?${surveyUuid}`;
         //Copy the text to the clipboard
         const successful = navigator.clipboard.writeText(sharableSurveyLink);
 

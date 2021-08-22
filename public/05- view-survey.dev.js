@@ -82,14 +82,7 @@ function getTheAverageScorePerQuestion(questionInASurvey) {
 
 function copyTextFromElement() {
   try {
-    var textWantToCopy;
-
-    if (url.origin.includes('localhost')) {
-      textWantToCopy = "http://localhost:3000/06-%20answer-login.html?".concat(uuid);
-    } else {
-      textWantToCopy = "https://sendsurveys.herokuapp.com/06-%20answer-login.html?".concat(uuid);
-    } //Copy the text to the clipboard
-
+    var textWantToCopy = "06-%20answer-login.html?".concat(uuid); //Copy the text to the clipboard
 
     var successful = navigator.clipboard.writeText(textWantToCopy);
     if (successful) alert('Link copied to clipboard!');else buttonCopy.innerHTML = "Unable to copy!";

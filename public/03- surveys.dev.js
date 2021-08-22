@@ -1,8 +1,5 @@
 "use strict";
 
-//Get the URL
-var url_string = window.location.href;
-var url = new URL(url_string);
 var root = document.querySelector('#nameUser');
 
 function renderUserDetails() {
@@ -121,14 +118,7 @@ function showSurvey(surveyId) {
 
 function copyTextFromElement(surveyUuid) {
   try {
-    var sharableSurveyLink;
-
-    if (url.origin.includes('localhost')) {
-      sharableSurveyLink = "http://localhost:3000/06-%20answer-login.html?".concat(surveyUuid);
-    } else {
-      sharableSurveyLink = "https://sendsurveys.herokuapp.com/06-%20answer-login.html?".concat(surveyUuid);
-    } //Copy the text to the clipboard
-
+    var sharableSurveyLink = "06-%20answer-login.html?".concat(surveyUuid); //Copy the text to the clipboard
 
     var successful = navigator.clipboard.writeText(sharableSurveyLink);
     var buttonCopy = document.querySelector("#Element".concat(surveyUuid));
