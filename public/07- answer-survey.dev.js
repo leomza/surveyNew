@@ -104,7 +104,7 @@ function answerSubmit(ev) {
 
         case 9:
           alert(submitAnswers.data.message);
-          location.href = "06-%20answer-login.html?".concat(uuid);
+          location.href = "./06- answer-login.html?".concat(uuid);
 
         case 11:
         case "end":
