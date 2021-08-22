@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 //I import the function of the Middlewares that I going to use here
-import { userCookieRead } from '../middlewares/UserCookie';
+import { userCookieRead } from '../middlewares/userCookie';
 import { isAdmin } from '../middlewares/isAdmin';
 
 //I import the function of the controlers that Im going to use here
